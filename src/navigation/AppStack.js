@@ -20,7 +20,7 @@ const AuthStack = () => {
       drawerContent={props => <CustomDrawer {...props} />}
       screenOptions={{
         headerShown: false,
-        drawerActiveBackgroundColor: '#aa18ea',
+        drawerActiveBackgroundColor: '#007b4f',
         drawerActiveTintColor: '#fff',
         drawerInactiveTintColor: '#333',
         drawerLabelStyle: {
@@ -30,7 +30,7 @@ const AuthStack = () => {
         },
       }}>
       <Drawer.Screen
-        name="Home"
+        name="Productos"
         component={TabNavigator}
         options={{
           drawerIcon: ({color}) => (
@@ -39,16 +39,7 @@ const AuthStack = () => {
         }}
       />
       <Drawer.Screen
-        name="Profile"
-        component={ProfileScreen}
-        options={{
-          drawerIcon: ({color}) => (
-            <Ionicons name="person-outline" size={22} color={color} />
-          ),
-        }}
-      />
-      <Drawer.Screen
-        name="Messages"
+        name="Mensajes"
         component={MessagesScreen}
         options={{
           drawerIcon: ({color}) => (
@@ -57,16 +48,7 @@ const AuthStack = () => {
         }}
       />
       <Drawer.Screen
-        name="Moments"
-        component={MomentsScreen}
-        options={{
-          drawerIcon: ({color}) => (
-            <Ionicons name="timer-outline" size={22} color={color} />
-          ),
-        }}
-      />
-      <Drawer.Screen
-        name="Settings"
+        name="Configuración"
         component={SettingsScreen}
         options={{
           drawerIcon: ({color}) => (

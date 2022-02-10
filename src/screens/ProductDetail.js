@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-const GameDetailsScreen = ({navigation, route}) => {
+const ProductDetail = ({navigation, route}) => {
   return (
     <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
       <Text>Game Details Screen</Text>
@@ -10,4 +10,4 @@ const GameDetailsScreen = ({navigation, route}) => {
   )
 }
 
-export default GameDetailsScreen
+export default ProductDetail
