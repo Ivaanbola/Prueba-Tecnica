@@ -13,23 +13,24 @@ const CustomDrawer = props => {
                 <ImageBackground
                     source={require('../images/menu-bg.png')}
                     style={{ padding: 15 }}>
+                    <View style={{ padding: 40, flexDirection:'row' }}>
+                    </View>
+                </ImageBackground>
+                <View style={{ padding: 20, flexDirection:'row' }}>
                     <Image
                         source={require('../images/user-profile.jpg')}
-                        style={{ height: 60, width: 60, borderRadius: 40, marginBottom: 10 }}
+                        style={{ height: 60, width: 60, borderRadius: 40, marginRight: 10 }}
                     />
-
-                </ImageBackground>
-                <View style={{ padding: 20 }}>
-                    <Text
-                        style={{
-                            color: '#fff',
-                            fontSize: 18,
-                            fontFamily: 'Roboto-Medium',
-                            marginBottom: 5,
-                        }}>
-                        Iván Bolaños
-                    </Text>
-                    <View style={{ flexDirection: 'row' }}>
+                    <View>
+                        <Text
+                            style={{
+                                color: '#fff',
+                                fontSize: 18,
+                                fontFamily: 'Roboto-Medium',
+                                marginBottom: 5,
+                            }}>
+                            Iván Bolaños
+                        </Text>
                         <Text
                             style={{
                                 color: '#fff',

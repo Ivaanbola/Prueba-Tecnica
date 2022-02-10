@@ -1,18 +1,19 @@
 import React from 'react';
-import { Image, Text, TouchableOpacity, View } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { windowWidth } from '../utils/Dimensions';
 
-export default function ListProducts({ photo, title, subTitle, isFree, price, onPress }) {
+export default function ListProducts({ photo, title, subTitle, isFree, price, onPress, navigation }) {
     return (
-        <View style={{
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            marginBottom: 20,
-            flex: 1,
-        }}>
+        <TouchableOpacity onPress={() =>
+            navigation.navigate('GameDetail', {
+                title: item.gameSeries,
+                id: item.id,
+            })
+        } style={styles.container}>
             <View style={{ flexDirection: 'row', alignItems: 'center', flex: 1 }}>
                 <Image
-                    source={photo}
+                    source={{ uri: photo }}
+                    resizeMode={'cover'}
                     style={{ width: 55, height: 55, borderRadius: 10, marginRight: 8 }}
                 />
                 <View style={{ width: windowWidth - 220 }}>
@@ -52,8 +53,7 @@ export default function ListProducts({ photo, title, subTitle, isFree, price, on
                         fontFamily: 'Roboto-Medium',
                         fontSize: 14,
                     }}>
-                        {isFree == 'Yes' && 'Play'}
-                        {isFree == 'No' && price}
+                        {-1}
                     </Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={onPress} style={{
@@ -68,11 +68,20 @@ export default function ListProducts({ photo, title, subTitle, isFree, price, on
                         fontFamily: 'Roboto-Medium',
                         fontSize: 14,
                     }}>
-                        {isFree == 'Yes' && 'Play'}
-                        {isFree == 'No' && price}
+                        {+1}
                     </Text>
                 </TouchableOpacity>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        marginBottom: 20,
+        flex: 1,
+    },
+});
+

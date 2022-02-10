@@ -3,7 +3,7 @@ export const SET_USER_AGE = 'SET_USER_AGE';
 export const INCREASE_AGE = 'INCREASE_AGE';
 export const GET_GAMES = 'GET_GAMES';
 
-const API_URL = 'https://www.amiiboapi.com/api/';
+const API_URL = 'https://www.amiiboapi.com/api/amiibo/';
 
 export const getGames = () => {
     try {
@@ -15,10 +15,12 @@ export const getGames = () => {
                 },
             });
             const json = await result.json();
+            console.log(json);
+
             if (json) {
                 dispatch({
                     type: GET_GAMES,
-                    payload: json
+                    payload: json.amiibo
                 });
             } else {
                 console.log('Unable to fetch!');

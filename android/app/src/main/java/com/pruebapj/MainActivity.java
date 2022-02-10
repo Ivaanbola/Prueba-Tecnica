@@ -1,4 +1,4 @@
-package com.reactnavigationv6;
+package com.pruebapj;
 
 import com.facebook.react.ReactActivity;
 
