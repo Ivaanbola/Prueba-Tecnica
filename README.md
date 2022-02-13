@@ -6,13 +6,12 @@
     Este proyecto esta creado desde un equipo windows.
     Si bien react-native funciona para ios y para android, hay que hacer ajustes en la parte de iOS que no se han podido tener en cuenta 
     Para iniciar el proyecto lanzar comando:
+    npm install,
+    Para lanzar la aplicación
     npx react-native run-android
 
 ## Limpieza de caches
-
-    # Delete temporary files
-    rm -rf $TMPDIR/react-*
-    rm -r $TMPDIR/react-*
+    En caso de que el paso anterior falle 
 
     # Clean native build folders
     ./android/gradlew clean -p ./android/

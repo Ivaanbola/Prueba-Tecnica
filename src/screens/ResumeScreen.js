@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
         marginBottom: 25,
     },
     shoppingView: {
-        alignItems: 'center',
+        alignItems: 'flex-end',
     },
 });
 
