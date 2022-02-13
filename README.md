@@ -1,6 +1,5 @@
-## Versiones node yarn
+## Versiones node 
     node 14.17.0
-    yarn 
 
 ## Iniciar App
     Este proyecto esta creado desde un equipo windows.
