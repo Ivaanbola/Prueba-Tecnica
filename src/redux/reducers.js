@@ -1,19 +1,27 @@
-import { SET_USER_NAME, SET_USER_AGE, INCREASE_AGE, GET_GAMES } from './actions';
+import { EDIT_ITEM, GET_GAMES } from './actions';
 
 const initialState = {
-    name: '',
-    age: 0,
     games: [],
-}
+    shoppingCart: [],
+};
 
 function userReducer(state = initialState, action) {
     switch (action.type) {
-        case SET_USER_NAME:
-            return { ...state, name: action.payload };
-        case SET_USER_AGE:
-            return { ...state, age: action.payload };
-        case INCREASE_AGE:
-            return { ...state, age: state.age + 1 };
+        case EDIT_ITEM:
+            let shoppingCart = state.shoppingCart;
+            let encontrado = false;
+            let item = action.payload;
+            for (let item of state.shoppingCart) {
+                if (item.key == action.payload.key) {
+                    item.quantity = action.payload.quantity;
+                    encontrado = true;
+                }
+            }
+            if (!encontrado) {
+                shoppingCart.push(item);
+            }
+            console.log(shoppingCart);
+            return { ...state, shoppingCart };
         case GET_GAMES:
             return { ...state, games: action.payload };
         default:
