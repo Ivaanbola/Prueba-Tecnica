@@ -3,7 +3,6 @@ import { Dimensions, Platform, StatusBar } from 'react-native';
 const windowDimensions = Dimensions.get('window');
 let APPBAR_HEIGHT = Platform.OS === 'ios' ? 44 : 56;
 let STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 44 : 0;
-import getSlideFromRightTransition from "react-navigation-slide-from-right-transition";
 
 class CustomStyle {
 
